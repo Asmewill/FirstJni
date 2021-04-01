@@ -10,10 +10,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.jianshui.firstndk.JniTest;
-
 public class MainActivity extends AppCompatActivity {
-
+    /***
+     * https://blog.csdn.net/qq_35071078/article/details/70502481
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Toast.makeText(getApplicationContext(), JniTestOne.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-        Toast.makeText(getApplicationContext(), JniTest.getInstatnce().getJniString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), JniTestOne.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
