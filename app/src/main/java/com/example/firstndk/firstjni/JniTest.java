@@ -3,17 +3,17 @@ package com.example.firstndk.firstjni;
 /**
  * Created by jsxiaoshui on 2021/3/30
  */
-public class JniTestOne {
-    private JniTestOne(){}
-    public static JniTestOne instance=null;
-    public static JniTestOne getInstance(){
+public class JniTest{
+    private JniTest(){}
+    public static JniTest instance=null;
+    public static JniTest getInstance(){
         if(instance==null){
-            instance=new JniTestOne();
+            instance=new JniTest();
         }
         return instance;
     }
     static {
-        System.loadLibrary("JniTestOne");
+        System.loadLibrary("JniTest");
     }
     public static native String getJniString();
 }

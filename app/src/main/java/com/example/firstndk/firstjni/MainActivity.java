@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(), JniTestOne.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), JniTest.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-        Toast.makeText(getApplicationContext(), JniTestOne.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), JniTest.getInstance().getJniString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
